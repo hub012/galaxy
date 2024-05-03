@@ -25,9 +25,9 @@ public class Powerup : MonoBehaviour
         
             if (player != null)
             {
-                player.canTripleShoot = true;
+                player.TripleShotPowerupOn();
             }
-        
+            
             Destroy(this.gameObject);
         
         }

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
-
     //Identificador de Variable  si es Publica o Privada  cuando las variables sean privadas le agregaremos una raya abajo para que sea mas facil
     //Tipo de Dato (int, floats, bool, strings)
     //Cada variable necesita tener un nombre
@@ -17,10 +15,11 @@ public class Player : MonoBehaviour
     private GameObject _laserPrefab;
 
     [SerializeField]
-    private GameObject _trepleShotsPrefab;
+    private GameObject _tripleShotsPrefab;
 
     [SerializeField]
     private float _fireRate = 0.25f;
+    [SerializeField]
     private float _canFire = 0.0f;
 
     [SerializeField]   
@@ -32,7 +31,6 @@ public class Player : MonoBehaviour
         //new Vector3(1,0,0)
         transform.position = new Vector3(0, 0, 0);
     }
-
     private void Update()
     {
         Movement();
@@ -44,7 +42,6 @@ public class Player : MonoBehaviour
            Shoot();
         }
     }
-     [SerializeField] 
     private void Shoot()
 
     {
@@ -59,7 +56,7 @@ public class Player : MonoBehaviour
                     //Right
                     //Instantiate(_laserPrefab, transform.position + new Vector3(0.55f, 0.06f, 0), Quaternion.identity); 
                     
-                    Instantiate(_trepleShotsPrefab, transform.position, Quaternion.identity);
+                    Instantiate(_tripleShotsPrefab, transform.position, Quaternion.identity);
                 }
                 
                  else
@@ -71,7 +68,6 @@ public class Player : MonoBehaviour
                 
                 
            }
-    
     private void Movement()
     
     {
@@ -117,9 +113,18 @@ public class Player : MonoBehaviour
       {
       //  transform.position = new Vector3(9.5f, transform.position.y, 0);
       }
+
     
- }
+ } 
+    public void TripleShotPowerupOn()
+    {
+      canTripleShoot = true;
+      StartCoroutine(TripleShotPowerDownRoutine());
     }
-
-   
-
+    public IEnumerator TripleShotPowerDownRoutine()
+    {
+      yield return new WaitForSeconds(5.0f);
+      canTripleShoot = false;
+    } 
+ 
+}
