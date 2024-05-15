@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour
    
     public bool canTripleShoot = false;
     public bool isSpeedBoostActive = false;
+    public int lives = 3;
 
     [SerializeField]
     private GameObject _laserPrefab;
@@ -86,9 +88,6 @@ public class Player : MonoBehaviour
           transform.Translate(Vector3.up * _speed * verticalInput  * Time.deltaTime);
         }
 
-      // if player on the is grater than 0
-      //set player position to 0
-
       if (transform.position.y > 4.2f)
       {
         transform.position = new Vector3(transform.position.x, 4.2f, 0);
@@ -97,10 +96,6 @@ public class Player : MonoBehaviour
       {
         transform.position = new Vector3(transform.position.x, -4.2f, 0);
       }
-
-       //Parte 1 poniendo limites laterales
-      //if player o the x > 8
-      //player x pos = 8
 
       if (transform.position.x > 8)
       {
@@ -122,9 +117,16 @@ public class Player : MonoBehaviour
       {
       //  transform.position = new Vector3(9.5f, transform.position.y, 0);
       }
-
-    
  } 
+    public void Damage()
+  {
+      lives--;
+      if (lives < 1 )
+      {
+        Destroy(this.gameObject);
+      }
+  }
+
     public void TripleShotPowerupOn()
     {
       canTripleShoot = true;

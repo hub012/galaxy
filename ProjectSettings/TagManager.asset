@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Triple_Shots_Powerup
+  - Speed_Powerup
+  - Enemy
+  - Laser
   layers:
   - Default
   - TransparentFX
