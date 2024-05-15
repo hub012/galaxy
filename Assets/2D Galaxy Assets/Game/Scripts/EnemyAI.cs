@@ -29,6 +29,10 @@ private void OnTriggerEnter2D(Collider2D other)
 {
     if (other.tag == "Laser")
     {
+        if(other.transform.parent != null)  
+        {
+            Destroy(other.transform.parent.gameObject);
+        }
         Destroy(other.gameObject);
         Destroy(this.gameObject);
     }
