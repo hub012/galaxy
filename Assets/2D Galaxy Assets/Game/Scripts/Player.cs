@@ -5,11 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //Identificador de Variable  si es Publica o Privada  cuando las variables sean privadas le agregaremos una raya abajo para que sea mas facil
-    //Tipo de Dato (int, floats, bool, strings)
-    //Cada variable necesita tener un nombre
-    //option necesita una valor iniciar
-   
+    [SerializeField]
+    private GameObject _playerExplosionPrefab;
     public bool canTripleShoot = false;
     public bool isSpeedBoostActive = false;
     public int lives = 3;
@@ -123,6 +120,7 @@ public class Player : MonoBehaviour
       lives--;
       if (lives < 1 )
       {
+        Instantiate(_playerExplosionPrefab, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
       }
   }
