@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8711744656547772523}
   m_Layer: 0
   m_Name: Triple Shots
-  m_TagString: Untagged
+  m_TagString: Triple_Shots_Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288ccee3bdfb54d8597ae55f26b36711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 10
 --- !u!1001 &2220711665781822097
 PrefabInstance:
   m_ObjectHideFlags: 0

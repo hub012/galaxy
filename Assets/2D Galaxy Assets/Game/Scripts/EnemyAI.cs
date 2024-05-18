@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyAI : MonoBehaviour    
 {
+    [SerializeField]
+    private GameObject _enemyExplosionPrefab;
     private float _speed = 5.0f;
    
     // Start is called before the first frame update
@@ -34,6 +36,7 @@ private void OnTriggerEnter2D(Collider2D other)
             Destroy(other.transform.parent.gameObject);
         }
         Destroy(other.gameObject);
+        Instantiate(_enemyExplosionPrefab, other.transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
     else if (other.tag == "Player")
@@ -44,7 +47,7 @@ private void OnTriggerEnter2D(Collider2D other)
         {
             player.Damage();
         }
-
+        Instantiate(_enemyExplosionPrefab, other.transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 }
