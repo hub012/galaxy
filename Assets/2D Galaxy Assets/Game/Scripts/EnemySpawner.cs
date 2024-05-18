@@ -28,9 +28,8 @@ public class EnemySpawner : MonoBehaviour
      public IEnumerator EnemySpawnerRoutine()
     {
       Instantiate(_ememyPrefab, _ememyPrefab.transform.position, Quaternion.identity);
-      Debug.Log("SOY YO");
       spawnCooldown = spawnInterval; 
-      yield return new WaitForSeconds(10.0f);
+      yield return new WaitForSeconds(5.0f);
       
     } 
  
