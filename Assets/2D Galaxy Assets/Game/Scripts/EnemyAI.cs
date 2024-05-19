@@ -48,6 +48,7 @@ private void OnTriggerEnter2D(Collider2D other)
             player.Damage();
         }
         Instantiate(_enemyExplosionPrefab, transform.position, Quaternion.identity);
+    
         Destroy(this.gameObject);
     }
 }

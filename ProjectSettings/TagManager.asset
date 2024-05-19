@@ -8,6 +8,7 @@ TagManager:
   - Speed_Powerup
   - Enemy
   - Laser
+  - Shield_Powerup
   layers:
   - Default
   - TransparentFX
