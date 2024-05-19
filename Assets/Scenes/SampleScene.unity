@@ -368,6 +368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d472cfa2c94ae495a8cd4eabfa7ff5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: 1
+  player: {fileID: 5504241314855764307, guid: 4755fac06f04647ccb0843c71dfcdffa, type: 3}
 --- !u!4 &603620497
 Transform:
   m_ObjectHideFlags: 0
@@ -496,6 +498,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 482c8e4c0346b704aa5f1760c3c989d5, type: 3}
   - {fileID: 21300000, guid: 9fe6f40efddf0b64fb68a3382b14a4db, type: 3}
   livesImageDisplay: {fileID: 1148801146}
+  titleScreen: {fileID: 719906521}
   scoreText: {fileID: 183688645}
   score: 0
 --- !u!114 &850376044

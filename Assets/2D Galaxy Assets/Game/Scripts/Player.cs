@@ -29,6 +29,8 @@ public class Player : MonoBehaviour
     private float _speed = 5.0f;
     [SerializeField]
     private UIManager _uiManager;
+    private GameController _gameController;
+    private SpawnManager _spawnManager;
 
     private void Start()
     {
@@ -39,6 +41,14 @@ public class Player : MonoBehaviour
         if(_uiManager != null)
         {
           _uiManager.UpdateLives(lives);
+        }
+        _gameController = GameObject.Find("GameController").GetComponent<GameController>();
+
+        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
+
+        if (_spawnManager != null)
+        {   
+          _spawnManager.StarSpawnRoutines();
         }
 
     }
@@ -141,6 +151,8 @@ public class Player : MonoBehaviour
       if (lives < 1 )
       {
         Instantiate(_playerExplosionPrefab, transform.position, Quaternion.identity);
+        _gameController.gameOver = true;
+        _uiManager.ShowTitleScreen();
         Destroy(this.gameObject);
       }
   }
