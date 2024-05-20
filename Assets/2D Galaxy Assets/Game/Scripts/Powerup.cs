@@ -17,13 +17,8 @@ public class Powerup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Collided with: " + other.name);
-
         if (other.tag == "Player")
-        {
-            Debug.Log("My name " + this.name);
-            Debug.Log("My tag " + this.tag);
-          
+        {         
             Player player = other.GetComponent<Player>();
         
             if (player != null)
