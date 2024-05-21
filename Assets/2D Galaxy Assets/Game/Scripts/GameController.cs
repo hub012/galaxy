@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     {
         if (gameOver == true)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.C))
             {
                 Instantiate(player, Vector3.zero, Quaternion.identity);
                 gameOver = false;
