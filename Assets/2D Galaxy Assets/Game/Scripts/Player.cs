@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     private UIManager _uiManager;
     private GameController _gameController;
     private SpawnManager _spawnManager;
+    private AudioSource _audioSource;
 
     private void Start()
     {
@@ -51,6 +52,8 @@ public class Player : MonoBehaviour
           _spawnManager.StarSpawnRoutines();
         }
 
+        _audioSource = GetComponent<AudioSource>();
+
     }
     private void Update()
     {
@@ -67,7 +70,8 @@ public class Player : MonoBehaviour
 
     {
          if (Time.time > _canFire)
-           {
+           { 
+                _audioSource.Play();
                 if (canTripleShoot == true)
                 {
                     //Left

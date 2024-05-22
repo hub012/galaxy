@@ -144,3 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyExplosionPrefab: {fileID: 7305595567780258324, guid: 3366b4ebd3fb241b88b7f3f1afff7d30, type: 3}
+  _aClip: {fileID: 8300000, guid: a885c043fab7e46438bba03ba9dab6bc, type: 3}

@@ -10,11 +10,16 @@ public class EnemyAI : MonoBehaviour
     private float _speed = 5.0f;
 
     private UIManager _uiManager;
+
+    [SerializeField]
+    private AudioClip _aClip;
+    
    
     // Start is called before the first frame update
     void Start()
     {
         _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        
     }
 
     // Update is called once per frame
@@ -40,6 +45,7 @@ private void OnTriggerEnter2D(Collider2D other)
         Destroy(other.gameObject);
         Instantiate(_enemyExplosionPrefab, transform.position, Quaternion.identity);
         _uiManager.UpdateScore();
+        AudioSource.PlayClipAtPoint(_aClip, Camera.main.transform.position, 1f);
         Destroy(this.gameObject);
     }
     else if (other.tag == "Player")
@@ -51,7 +57,7 @@ private void OnTriggerEnter2D(Collider2D other)
             player.Damage();
         }
         Instantiate(_enemyExplosionPrefab, transform.position, Quaternion.identity);
-    
+        AudioSource.PlayClipAtPoint(_aClip, Camera.main.transform.position, 1f);
         Destroy(this.gameObject);
     }
 }
