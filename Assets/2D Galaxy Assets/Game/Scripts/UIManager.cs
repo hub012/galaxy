@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public Sprite[] lives;
@@ -26,7 +26,10 @@ public class UIManager : MonoBehaviour
         score += 2;
 
         scoreText.text = "Score: " + score;
-
+        // si eres igual a 50 pon la funcion para cambiar de scene
+        if(score >= 50){
+            SceneManager.LoadScene("Nivel2");
+            }
     }
 
     public void ResetScore()
