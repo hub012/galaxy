@@ -21,6 +21,9 @@ public class Player : MonoBehaviour
     private GameObject _sheldGameObject;
 
     [SerializeField]
+    private GameObject [] _engines;
+
+    [SerializeField]
     private float _fireRate = 0.25f;
     [SerializeField]
     private float _canFire = 0.0f;
@@ -32,6 +35,8 @@ public class Player : MonoBehaviour
     private GameController _gameController;
     private SpawnManager _spawnManager;
     private AudioSource _audioSource;
+
+    private int hitCount = 0;
 
     private void Start()
     {
@@ -53,6 +58,8 @@ public class Player : MonoBehaviour
         }
 
         _audioSource = GetComponent<AudioSource>();
+
+        hitCount = 0;
 
     }
     private void Update()
@@ -148,6 +155,18 @@ public class Player : MonoBehaviour
           shieldsActive = false;
           _sheldGameObject.SetActive(false);
           return;
+      }
+
+      hitCount++;
+      if(hitCount == 1)
+      {
+        _engines[0].SetActive(true);
+
+      }
+      else if (hitCount == 2)
+      {
+        _engines[1].SetActive(true);
+        
       }
       lives--;
       _uiManager.UpdateLives(lives);
