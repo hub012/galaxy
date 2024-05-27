@@ -37,6 +37,18 @@ public class Player : MonoBehaviour
     private AudioSource _audioSource;
 
     private int hitCount = 0;
+    public static Player instance; 
+
+    void Awake(){
+        if(instance == null){
+            instance = this;
+        }else if (instance != this){
+           Destroy(this);
+        }
+        DontDestroyOnLoad(this);
+        
+    }
+
 
     private void Start()
     {
@@ -54,7 +66,7 @@ public class Player : MonoBehaviour
 
         if (_spawnManager != null)
         {   
-          _spawnManager.StarSpawnRoutines();
+          _spawnManager.StartSpawnRoutines();
         }
 
         _audioSource = GetComponent<AudioSource>();
