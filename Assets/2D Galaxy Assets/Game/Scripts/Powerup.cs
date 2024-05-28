@@ -44,12 +44,7 @@ public class Powerup : MonoBehaviour
                 {
                     player.EnableShields();
                 }
-                if (this.tag == "Triple_Shots_Powerup"){    
-                        player.TripleShotPowerupOn();
-                }
-                if (this.tag == "Speed_Powerup"){
-                    player.SpeedBoostPowerupOn();
-                }
+            
 
             }
             
