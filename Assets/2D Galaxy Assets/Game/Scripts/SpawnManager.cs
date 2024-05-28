@@ -10,24 +10,44 @@ public class SpawnManager : MonoBehaviour
     private GameObject[] powerups;
     private GameController _gameController;
 
-    // Start is called before the first frame update
-    void Start()
-    {    
-        _gameController = GameObject.Find("GameController").GetComponent<GameController>();
-        StartCoroutine(EnemySpawnRoutine());
-        StartCoroutine(PowerUpSpawnRoutine());
+    public static SpawnManager instance;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    public void StarSpawnRoutines()
+    // Start is called before the first frame update
+    void Start()
+    {
+        _gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        if (_gameController != null)
+        {
+            StartSpawnRoutines();
+        }
+        else
+        {
+            Debug.LogError("GameController not found!");
+        }
+    }
+
+    public void StartSpawnRoutines()
     {
         StartCoroutine(EnemySpawnRoutine());
         StartCoroutine(PowerUpSpawnRoutine());
-
     }
 
     IEnumerator EnemySpawnRoutine()
     {
-        while (_gameController.gameOver == false)
+        while (_gameController != null && !_gameController.gameOver)
         {
             Instantiate(enemyShipPrefab, new Vector3(Random.Range(-7f, 7f), 7, 0), Quaternion.identity);
             yield return new WaitForSeconds(5.0f);
@@ -36,13 +56,11 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator PowerUpSpawnRoutine()
     {
-        while (_gameController.gameOver == false)
+        while (_gameController != null && !_gameController.gameOver)
         {
-            int randomPowerup = Random.Range(0, 3);
+            int randomPowerup = Random.Range(0, powerups.Length);
             Instantiate(powerups[randomPowerup], new Vector3(Random.Range(-7f, 7f), 7, 0), Quaternion.identity);
             yield return new WaitForSeconds(5.0f);
         }
     }
-
-
 }

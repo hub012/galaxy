@@ -35,7 +35,7 @@ Material:
     - _Distfading: 68
     - _Formuparam: 530
     - _Iterations: 17
-    - _Saturation: 85
+    - _Saturation: -283.6
     - _StepSize: 130
     - _Tile: 700
     - _Volsteps: 20
