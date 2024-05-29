@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4873361227989347903}
   - component: {fileID: 7286584182986286891}
+  - component: {fileID: 7731887108240510006}
   m_Layer: 0
   m_Name: BShots
   m_TagString: Triple_Shots_Powerup
@@ -48,6 +49,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
+--- !u!114 &7731887108240510006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9024115471833755877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f964ca082d32451993b253017e1924b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  targetTag: Player
 --- !u!1001 &1135300374896541110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56,6 +71,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4873361227989347903}
     m_Modifications:
+    - target: {fileID: -6441875420945566768, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_Name
       value: 'R_Laser '
@@ -74,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1903416223355295081, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5861820879494994114, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_LocalScale.x
@@ -124,7 +143,9 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2025424899273561072, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+    - {fileID: 4944606395010595336, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -142,6 +163,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4873361227989347903}
     m_Modifications:
+    - target: {fileID: -6441875420945566768, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_Name
       value: Center_Laser
@@ -160,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1903416223355295081, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5861820879494994114, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_LocalScale.x
@@ -210,7 +235,9 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2025424899273561072, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+    - {fileID: 4944606395010595336, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -228,6 +255,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4873361227989347903}
     m_Modifications:
+    - target: {fileID: -6441875420945566768, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_Name
       value: L_Laser
@@ -246,7 +277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1903416223355295081, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5861820879494994114, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_LocalScale.x
@@ -258,7 +289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5861820879494994114, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5861820879494994114, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_LocalPosition.z
@@ -296,7 +327,9 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4944606395010595336, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+    - {fileID: -2025424899273561072, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

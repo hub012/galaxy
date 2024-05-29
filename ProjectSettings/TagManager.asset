@@ -10,6 +10,8 @@ TagManager:
   - Laser
   - Shield_Powerup
   - Boos1
+  - PlayerLaser
+  - EnemyLaser
   layers:
   - Default
   - TransparentFX

@@ -51,7 +51,7 @@ public class BossAI : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("PlayerProjectile"))
+        if (collision.gameObject.CompareTag("PlayerLaser"))
         {
             var projectile = health ;
             if (projectile != null)

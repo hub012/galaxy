@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CentralRotation : MonoBehaviour
+public class Rotation : MonoBehaviour
 {
     public float rotationSpeed = 20f;
     public float initialRadius = 5f;
