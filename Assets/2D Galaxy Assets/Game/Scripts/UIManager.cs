@@ -27,9 +27,13 @@ public class UIManager : MonoBehaviour
 
         scoreText.text = "Score: " + score;
         // si eres igual a 50 pon la funcion para cambiar de scene
-        if(score >= 50){
+        /* if(score >= 50){
             SceneManager.LoadScene("Nivel2");
-            }
+        } */
+    }
+
+    public int GetScore(){
+        return score;
     }
 
     public void ResetScore()

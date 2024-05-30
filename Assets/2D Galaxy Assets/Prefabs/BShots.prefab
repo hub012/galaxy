@@ -79,6 +79,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'R_Laser '
       objectReference: {fileID: 0}
+    - target: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+      propertyPath: m_TagString
+      value: EnemyLaser
+      objectReference: {fileID: 0}
     - target: {fileID: 1903416223355295081, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_Color.b
       value: 0.043137256
@@ -144,12 +148,33 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: -2025424899273561072, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
     - {fileID: 4944606395010595336, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7610208794840708938}
   m_SourcePrefab: {fileID: 100100000, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+--- !u!1 &1773207733415293876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+  m_PrefabInstance: {fileID: 1135300374896541110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7610208794840708938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773207733415293876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f964ca082d32451993b253017e1924b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  targetTag: Player
 --- !u!4 &6816262517918475636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5861820879494994114, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
@@ -170,6 +195,10 @@ PrefabInstance:
     - target: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_Name
       value: Center_Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+      propertyPath: m_TagString
+      value: EnemyLaser
       objectReference: {fileID: 0}
     - target: {fileID: 1903416223355295081, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_Color.b
@@ -236,17 +265,38 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: -2025424899273561072, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
     - {fileID: 4944606395010595336, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8700275928134986071}
   m_SourcePrefab: {fileID: 100100000, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
 --- !u!4 &1772488317074997052 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5861820879494994114, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
   m_PrefabInstance: {fileID: 5314383572793862142}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6816951300285950460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+  m_PrefabInstance: {fileID: 5314383572793862142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8700275928134986071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6816951300285950460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f964ca082d32451993b253017e1924b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  targetTag: Player
 --- !u!1001 &5603747890782699029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -262,6 +312,10 @@ PrefabInstance:
     - target: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_Name
       value: L_Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+      propertyPath: m_TagString
+      value: EnemyLaser
       objectReference: {fileID: 0}
     - target: {fileID: 1903416223355295081, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
       propertyPath: m_Color.b
@@ -329,13 +383,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4944606395010595336, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
-    - {fileID: -2025424899273561072, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2240483097749638565}
   m_SourcePrefab: {fileID: 100100000, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
 --- !u!4 &2062046148833978071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5861820879494994114, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
   m_PrefabInstance: {fileID: 5603747890782699029}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6529750658249175063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1682893414399659522, guid: 3b399115b18cd4f6595bca31c6255669, type: 3}
+  m_PrefabInstance: {fileID: 5603747890782699029}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2240483097749638565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529750658249175063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f964ca082d32451993b253017e1924b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  targetTag: Player

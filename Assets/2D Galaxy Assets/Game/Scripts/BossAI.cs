@@ -13,12 +13,14 @@ public class BossAI : MonoBehaviour
 
     public GameObject laserPrefab; // Reference to the laser prefab
     public Transform firePoint; // Point from which the laser is fired
+    private AudioSource _audioSource;
 
     void Start()
     {
         health = GetComponent<Health>();
         startPosition = new Vector3(-0.28f, 2.70f, 0);
         attackTimer = attackInterval;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -35,10 +37,12 @@ public class BossAI : MonoBehaviour
 
     void HandleAttack()
     {
+     
         attackTimer -= Time.deltaTime;
         if (attackTimer <= 0)
         {
             Attack();
+            _audioSource.Play();
             attackTimer = attackInterval;
         }
     }

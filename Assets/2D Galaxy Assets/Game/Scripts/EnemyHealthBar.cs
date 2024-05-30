@@ -3,14 +3,13 @@ using UnityEngine.UI;
 
 public class EnemyHealthBar : MonoBehaviour
 {
-    public Health  health;
-    public Slider healthSlider;
+    public Health health;
 
     void Start()
     {
-        healthSlider.maxValue = health.GetMaxHealth();
-        healthSlider.value = health.GetCurrentHealth();
+        
         health.onHealthChanged.AddListener(UpdateHealthBar);
+
     }
 
     void UpdateHealthBar()
