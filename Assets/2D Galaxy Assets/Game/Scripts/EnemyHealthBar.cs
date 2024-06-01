@@ -14,6 +14,6 @@ public class EnemyHealthBar : MonoBehaviour
 
     void UpdateHealthBar()
     {
-        healthSlider.value = health.GetCurrentHealth();
+        //healthSlider.value = health.GetCurrentHealth();
     }
 }
